@@ -142,7 +142,7 @@ title: 关于我
 ## 唠叨一下
 
 - Hexo 的文档是出了名的难用，但支持中文、又是开源的，开发过程常常自我安慰，忍忍就过去了。
-- 设计主题用到的 sketch 文件（*hexo-theme-binbin-design.sketch*）一并放到网上，常常一边写一边重新设计，sketch 文件被我弄得很乱，这真不是谦虚。
+- 设计主题用到的 sketch 文件（*hexo-theme-binbin-design.sketch*）一并放到[网上](https://c-t.work/s/4ca355b8b7ab40)，常常一边写一边重新设计，sketch 文件被我弄得很乱，这真不是谦虚。
 
 ## 许可协议
 
