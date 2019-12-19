@@ -1,0 +1,109 @@
+@import "markdown.css";
+@import "paginator.css";
+@import "aside.css";
+@import "header.css";
+@import "index.css";
+@import "post.css";
+@import "archive.css";
+@import "footer.css";
+@import "layout.css";
+@import "slider.css";
+@import "custom.css";
+/* #################### 全局样式 #################### */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Source Han Serif SC", "PingFang SC", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #34495E;
+}
+
+body {
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-duration: 1s;
+    color: #34495E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
+    #aside, .web {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    #content {
+        margin: 0 24px;
+    }
+    #post-container {
+        margin: 0;
+    }
+    .section {
+        margin-right: 0;
+        padding: 24px 0;
+    }
+    #article img {
+        max-width: 100%;
+    }
+    /* 分页 */
+    #page-nav-box {
+        height: 80px;
+    }
+    #page-nav>.page-number, #page-nav>.space {
+        display: none;
+    }
+    #page-count {
+        display: block;
+    }
+    #page-nav {
+        padding: 0;
+    }
+    /* header.ejs */
+    .logo {
+        display: none;
+    }
+    .title {
+        margin-left: 24px;
+        color: #fff;
+    }
+    #header {
+        background: #BF4033;
+    }
+    .archive{
+        padding-left: 0;
+    }
+}
+
+/* @media all and (orientation: portrait) {
+    #aside, .header__right {
+        display: none;
+    }
+    #content {
+        margin-right: 48px;
+    }
+    .section {
+        padding: 24px 0;
+    }
+    #article img {
+        max-width: 100%;
+    }
+
+    #page-nav-box {
+        height: 80px;
+    }
+    #page-nav>.page-number, #page-nav>.space {
+        display: none;
+    }
+    #page-count {
+        display: block;
+    }
+} */

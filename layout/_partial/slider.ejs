@@ -1,0 +1,14 @@
+<div id="slider">
+    <div>
+        <div id="slider-menu">
+            <% for ( menu in theme.menus ) { %>
+            <li id="menu">
+                <a href="<%- theme.menus[menu] %>" class="menu-item"><%- menu %></a>
+            </li>
+            <% } %>
+        </div>
+        <div id="slider-aside">
+            <%- include("../aside.ejs") %>
+        </div>
+    </div>
+</div>

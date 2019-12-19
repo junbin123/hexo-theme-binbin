@@ -1,0 +1,118 @@
+/* markdown 样式 */
+
+/* 正文 */
+
+#article {
+    font-size: 16px;
+    line-height: 1.8em;
+}
+
+#article p {
+    margin-bottom: 10px;
+}
+
+/* 标题 */
+
+#article h1, #article h2, #article h3, #article h4, #article h5, #article h6 {
+    line-height: 1.8em;
+    margin-top: 20px;
+}
+
+#article h1 {
+    font-size: 2em;
+}
+
+#article h2 {
+    font-size: 1.7em;
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: .4em;
+}
+
+#article h3 {
+    font-size: 1.4em;
+}
+
+#article h4 {
+    font-size: 1.2em;
+}
+
+#article h5 {
+    font-size: 1.2em;
+    color: #666;
+}
+
+#article h6 {
+    font-size: 1em;
+    color: #666;
+}
+
+/* 其他 */
+
+#article blockquote {
+    background: rgba(255, 204, 198, 0.40);
+    border-left: 6px solid #BF4033;
+    padding: 1.4em;
+    margin: 20px 0;
+}
+
+#article a {
+    font-weight: bold;
+    color: #BF4033;
+}
+
+#article ul, #article ol {
+    margin: 16px 0 16px 24px;
+}
+
+#article li {
+    margin: 6px auto;
+}
+
+/* 表格 */
+
+table {
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+tr, td, th {
+    border: 1px solid #e0e0e0;
+}
+
+th, td {
+    padding: 8px 10px;
+}
+
+th {
+    color: #BF4033;
+}
+
+/* 代码 */
+
+#article span, code {
+    font-family: "codefont";
+}
+
+#article p>code {
+    background: #f8f8f8;
+    color: #E96901;
+    line-height: 1em;
+    padding: 0 .4em;
+    margin: 0 .4em;
+}
+
+#article pre>code {
+    font-family: "codefont";
+    padding: 40px 16px 20px;
+    border-radius: 8px;
+}
+
+/* 图片 */
+
+#article img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 6px;
+    box-shadow: 0 8px 12px rgba(189, 189, 189, .25);
+    margin: 30px 0;
+}

@@ -1,0 +1,84 @@
+/* #################### layout.ejs #################### */
+
+#header {
+    width: 100%;
+    height: 60px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.10);
+    position: fixed;
+    top: 0;
+}
+
+#footer {
+    width: 100%;
+    height: 120px;
+    background: #F4F4F4;
+    text-align: center;
+    margin-top: 120px;
+}
+
+#main {
+    max-width: 1024px;
+    margin: 80px auto;
+    overflow: hidden;
+}
+
+#center {
+    width: 100%;
+    float: left;
+}
+
+#aside {
+    width: 260px;
+    float: left;
+    margin-left: -260px;
+}
+
+#content {
+    margin-right: 260px;
+}
+
+#bg-cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #000;
+    opacity: .5;
+    top: 0;
+    z-index: 1;
+    display: none;
+}
+
+#bg-cover-up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 260px;
+    z-index: 3;
+}
+
+#back-to-top {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.30);
+    border-radius: 50%;
+    bottom: 50px;
+    transition: all .3s linear;
+}
+
+#back-to-top--icon {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+
+#back-to-top:hover {
+    background: rgba(0, 0, 0, 0.70);
+    animation-name: swing;
+    -webkit-animation-name: swing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

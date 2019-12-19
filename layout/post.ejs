@@ -1,0 +1,39 @@
+<div id="post-container">
+    <div id="post">
+        <% if (page.categories){%>
+        <% page.categories.forEach(function(cat){ %>
+        <a href="<%- config.url + '/'+ cat.path %>">
+            <div class="post-category">
+                <%- image_tag("images/category-icon.png", {alt:"分类icon",class: "category-icon"}) %>
+                <div class="category-name"> <%- cat.name %>
+                </div>
+            </div>
+        </a>
+        <% }) %>
+        <% } %>
+        <div class="post-title">
+            <%- page.title %>
+        </div>
+        <div class="post-info">
+            <span><%- date(page.date, "YYYY-MM-DD") %></span> ·
+            <span><%- config.author %></span>
+        </div>
+        <div class="post-line"></div>
+    </div>
+
+    <div id="article">
+        <%- page.content %>
+    </div>
+
+    <div class="post-line"></div>
+
+    <% if (page.tags){%>
+    <% page.tags.forEach(function(tag){ %>
+    <a href="<%- config.url + '/'+ tag.path %>">
+        <div class="post-tag animated">
+            <%- '# ' + tag.name %>
+        </div>
+    </a>
+    <% }) %>
+    <% } %>
+</div>

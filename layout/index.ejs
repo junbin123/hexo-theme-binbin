@@ -1,0 +1,17 @@
+<% page.posts.forEach(function(post){ %>
+<a href="/<%- post.path %>">
+    <div class="section">
+        <h2 class="post-title"><%- post.title %></h2>
+        <div class="post-info">
+            <span class="section__date"><%- date(post.date, "YYYY-MM-DD" )%></span> ·
+            <span class="section__author"><%- config.author %></span>
+        </div>
+        <div class="section__excerpt"><%- post.excerpt %></div>
+    </div>
+</a>
+<% }); %>
+
+
+
+<!-- 引入animate.css -->
+<%- partial('_partial/paginator') %>

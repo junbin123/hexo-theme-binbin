@@ -1,0 +1,77 @@
+/*
+ * 分页
+ */
+
+#page-nav-box {
+    height: 40px;
+}
+
+#page-nav {
+    text-align: center;
+    font-size: 18px;
+    height: 40px;
+    padding: 0 48px 0 24px;
+}
+
+#page-nav>.page-number, #page-nav>.extend {
+    color: #BF4033;
+    border-radius: 4px;
+    line-height: 40px;
+    background: #eee;
+}
+
+#page-nav>.page-number {
+    width: 40px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+#page-nav>.prev {
+    width: 90px;
+    display: block;
+    position: absolute;
+}
+
+#page-nav>.next {
+    /* margin: 0; */
+    margin-top: -40px;
+    width: 100%;
+    display: block;
+}
+
+#next-icon {
+    width: 90px;
+    background: #eee;
+    float: right;
+    border-radius: 4px;
+}
+
+/* 选中 */
+
+#page-nav>.current {
+    background: #BF4033;
+    color: #fff;
+}
+
+/* hover */
+
+#page-nav>a[href^="/"]:hover, #next-icon:hover {
+    background: #ddd;
+    transition: all .3s linear;
+}
+
+#page-nav>.current, #page-nav>.space {
+    cursor: help;
+}
+
+/* 页数 */
+
+#page-count {
+    display: none;
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    height: 40px;
+    top: -40px;
+    z-index: -1;
+}

@@ -1,0 +1,26 @@
+<% var i = -1,year=[] %>
+
+<section class="archive">
+    <% page.posts.each(function (post) { %>
+    <% var thisYear = date(post.date, "YYYY") %>    
+    <% year.push(date(post.date, "YYYY")) %>
+    <% i++ %>
+    <% if(thisYear != year[i-1]) { %> 
+    <div class="archive-year">
+        <%- thisYear %>
+    </div>
+    <% } %>
+    <a href="<%- url_for(post.path) %>">
+        <div class="animated archive-item">
+            <div class="archive-item__date"><%= date(post.date, "YYYY-MM-DD") %></div>
+            <div class="archive-item__title"> <%= post.title %></div>
+        </div>
+    </a>
+    <% }) %>
+</section>
+
+
+
+
+
+<%- partial('_partial/paginator') %>

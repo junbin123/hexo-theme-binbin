@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- config.title %></title>
+    <!-- 引入配置文件 -->
+    <%- css("css/main.css") %>
+    <!-- 代码高亮库 -->
+    <%- css("js/highlight/styles/" + theme.code_style + ".css") %>
+    <!-- 插入favicon -->
+    <%- favicon_tag("images/favicon.ico") %>
+    <!-- 引入字体 -->
+    <%- css('css/font.css') %>
+    <!-- 引入animate.css -->
+    <%- css("https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css") %>
+</head>
+
+<body id="animated body">
+    <div id="bg-cover"></div>
+    <div id="bg-cover-up"></div>
+
+    <!-- 引入导航 -->
+    <header id="header">
+        <div id="header-container">
+            <%- include("header.ejs") %>
+        </div>
+    </header>
+
+    <div class="mobile">
+        <div class="icon-box-60px" id="slider-icon">
+            <%- image_tag("images/more.png", {alt:"more-icon",class: "icon-30px"}) %>
+        </div>
+    </div>
+
+
+    <div id="main">
+        <!-- 引入内容 -->
+        <div id="center">
+            <div id="content">
+                <%- body -%>
+            </div>
+        </div>
+        <!-- 引入侧边栏 -->
+        <aside id="aside">
+            <%- include("aside.ejs") %>
+
+            <!-- 回到顶部 -->
+            <a href="#top" target="_self" class="animated" id="back-to-top">
+                <%- image_tag("images/top.png", {alt:"logo",id: "back-to-top--icon"}) %>
+            </a>
+        </aside>
+        <!-- 移动端抽屉菜单 -->
+        <%- include("_partial/slider.ejs") %>
+    </div>
+
+    <!-- 引入页脚 -->
+    <footer id="footer">
+        <%- include("footer.ejs") %>
+    </footer>
+
+
+    <!-- 引入jquery -->
+    <%- js('js/jquery-3.4.1.min.js') %>
+    <!-- 引入js文件 -->
+    <%- js('js/main.js') %>
+    <!-- 引入代码高亮的 js -->
+    <%- js('js/highlight/highlight.pack.js') %>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

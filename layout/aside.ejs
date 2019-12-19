@@ -1,0 +1,35 @@
+<!-- 关注 -->
+<div class="aside__item">
+    <div class="aside__item--title">关注</div>
+    <ul>
+        <% for ( link in theme.links ) { %>
+        <a href="<%- theme.links[link] %>" target="_blank">
+            <li class="aside__item--li"><%- link %></li>
+        </a>
+        <% } %>
+    </ul>
+</div>
+
+<!-- 分类 -->
+<div class="aside__item">
+    <div class="aside__item--title">分类</div>
+    <ul>
+        <% site.categories.forEach(function(cat){ %>
+        <a href="<%- config.url + '/'+ cat.path %>">
+            <li class="aside__item--li"><%- cat.name %></li>
+        </a>
+        <% }) %>
+    </ul>
+</div>
+
+<!-- 标签 -->
+<div class="aside__item">
+    <div class="aside__item--title">标签</div>
+    <ul class="aside-tag">
+        <% site.tags.forEach(function(tag){ %>
+        <a href="<%- config.url + '/' + tag.path %>">
+            <li class="aside__item--li tag"><%- tag.name %></li>
+        </a>
+        <% }) %>
+    </ul>
+</div>

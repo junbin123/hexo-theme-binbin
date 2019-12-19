@@ -1,0 +1,25 @@
+<div class="header__left animated">
+    <a href="<%- config.url %>">
+        <%- image_tag("images/logo.png", {alt:"logo",class: "logo"}) %>
+        <h1 class="title"><%- config.title %></h1>
+    </a>
+</div>
+
+<nav class="header__right">
+
+
+    <div class="web">
+        <!-- 内部页面 -->
+        <% for ( menu in theme.menus ) { %>
+        <li id="menu">
+            <a href="<%- theme.menus[menu] %>" class="menu-item"><%- menu %></a>
+        </li>
+        <% } %>
+        <!-- RSS 链接 -->
+        <a href="<%- config.url + '/atom.xml' %>" target="_blank">
+            <%- image_tag("images/rss.png", {alt:"rss",class: "rss"}) %>
+        </a>
+    </div>
+
+</nav>
+

@@ -1,0 +1,15 @@
+<!-- 辅助函数，参考 https://hexo.io/zh-cn/docs/helpers#paginator -->
+<div id="page-nav-box"></div>
+<% if (page.total > 1){ %>
+<nav id="page-nav">
+  <%- paginator({
+    prev_text: "<div id='prev-icon'>上一页</div>",
+    next_text: "<div id='next-icon'>下一页</div>",
+  }) %>
+</nav>
+<% } %>
+
+<div id="page-count">
+  <p>当前第 <span style="color: #BF4033;"><%- page.current %></span> 页</p>
+  <p>共 <%- page.total %> 页</p>
+</div>

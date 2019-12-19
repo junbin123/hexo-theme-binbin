@@ -1,0 +1,33 @@
+#slider {
+    width: 260px;
+    background: #fff;
+    position: fixed;
+    right: -260px;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: all .4s ease-in-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#slider-menu {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 24px;
+    border-bottom: 1px solid #ececec;
+}
+
+.mobile {
+    display: none;
+}
+
+#slider-icon {
+    background: #FF7B6E;
+    position: fixed;
+    right: 0px;
+    top: 0;
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}

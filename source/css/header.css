@@ -1,0 +1,68 @@
+/* #################### header.ejs #################### */
+
+#header-container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header__left {
+    float: left;
+}
+
+.header__left:hover {
+    animation-name: rubberBand;
+    -webkit-animation-name: rubberBand;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 24px;
+    float: left;
+}
+
+.title {
+    font-size: 22px;
+    line-height: 60px;
+    float: left;
+    color: #BF4033;
+    font-weight: bold;
+}
+
+.header__right {
+    float: right;
+    /* background: #999; */
+}
+
+#menu {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+    margin-left: 14px;
+}
+
+.menu-item {
+    display: inline-block;
+    height: 56px;
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+
+.menu-item:hover {
+    color: #BF4033;
+    border-bottom: 4px solid #BF4033;
+    transition: all .5s linear;
+}
+
+.rss {
+    width: 24px;
+    height: 24px;
+    margin: 18px 24px;
+}
+
+.rss:hover {
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.20);
+}

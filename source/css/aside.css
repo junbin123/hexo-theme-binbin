@@ -1,0 +1,46 @@
+/* #################### 侧边栏 #################### */
+
+.aside__item {
+    margin: 20px 24px 30px 24px;
+}
+
+.aside__item--title {
+    font-size: 18px;
+    padding-bottom: 6px;
+    font-weight: bold;
+    color: #BF4033;
+}
+
+.aside__item--li {
+    list-style-type: none;
+    line-height: 30px;
+    padding-left: 10px;
+    transition: all .3s linear;
+}
+
+.aside-tag{
+    /* padding-left: 10px; */
+    padding-top: 10px;
+}
+
+.tag {
+    padding-right: 10px;
+    margin: 0 10px 10px 0;
+    float: left;
+    background: #ECECEC;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.aside__item--li:hover {
+    color: #BF4033;
+    background: #ECECEC;
+    border-radius: 2px;
+}
+
+.tag:hover {
+    background: #BF4033;
+    color: #fff;
+}
+
+/* 回到顶部 */
