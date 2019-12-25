@@ -11,12 +11,35 @@
 </div>
 
 <!-- 分类 -->
+<% 
+// 获取分类地址
+var pathArr = []
+site.categories.forEach(function (cat) {
+    pathArr.push(url_for(cat.path))
+})
+pathArr.sort()
+var categories = pathArr.map(item => {
+    let index = item.slice(0, -1).lastIndexOf("/")
+    let name = item.slice(index + 1, -1)
+    // 给name前添加空格
+    let reg = new RegExp("/", "g")
+    let count = (item.match(reg).length - 3) * 4
+    for (let i = 0; i < count; i++) {
+        name = "&nbsp;" + name
+    }
+    return {
+        name: name,
+        path: item
+    }
+})
+%>
 <div class="aside__item">
     <div class="aside__item--title">分类</div>
     <ul>
-        <% site.categories.forEach(function(cat){ %>
-        <a href="<%- config.url + '/'+ cat.path %>">
-            <li class="aside__item--li"><%- cat.name %></li>
+        <% categories.forEach(function(cat){ %>
+        <a href="<%- cat.path %>">
+            <li class="aside__item--li">
+                <%- cat.name %></li>
         </a>
         <% }) %>
     </ul>
@@ -27,9 +50,13 @@
     <div class="aside__item--title">标签</div>
     <ul class="aside-tag">
         <% site.tags.forEach(function(tag){ %>
-        <a href="<%- config.url + '/' + tag.path %>">
+        <a href="<%- url_for(tag.path) %>">
             <li class="aside__item--li tag"><%- tag.name %></li>
         </a>
         <% }) %>
     </ul>
 </div>
+
+<a href="#top" target="_self" class="animated" id="back-to-top">
+    <%- image_tag("images/top.png", {alt:"logo",id: "back-to-top--icon"}) %>
+</a>

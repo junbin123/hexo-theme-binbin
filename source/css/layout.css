@@ -60,13 +60,15 @@
 }
 
 #back-to-top {
+    display: block;
     width: 60px;
     height: 60px;
     position: fixed;
-    background: rgba(0, 0, 0, 0.30);
+    background: #000;
     border-radius: 50%;
     bottom: 50px;
-    transition: all .3s linear;
+    margin-left: 100px;
+    opacity: 0.3;
 }
 
 #back-to-top--icon {
@@ -76,7 +78,7 @@
 }
 
 #back-to-top:hover {
-    background: rgba(0, 0, 0, 0.70);
+    opacity: 0.7;
     animation-name: swing;
     -webkit-animation-name: swing;
     animation-duration: 1s;

@@ -1,12 +1,13 @@
 // 滚动一屏显示顶部按钮
-var height = $(window).height();
+// var height = $(window).height()/2;
+var height = 12
 var backToTop = $("#back-to-top");
 backToTop.hide();
 $(window).scroll(() => {
     if ($(window).scrollTop() > height) {
-        backToTop.show();
+        backToTop.fadeIn(300);
     } else {
-        backToTop.hide(500);
+        backToTop.fadeOut(300);
     }
 })
 
